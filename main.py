@@ -182,8 +182,8 @@ def main():
 
     PrintGen(gen2);
 
-    gen1 = gen2[:]
-    gen2 = zero[:];
+    gen1 = gen2.copy();
+    gen2 = zero.copy();
 
     time.sleep(delayMs);
 
