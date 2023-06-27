@@ -11,8 +11,8 @@ Elementary Cellular Automaton
 
 `<OUTPUT_LENGTH>` - how long the output should be in characters  
 `<DELAY_MS>`      - delay between next iteration of automaton  
-`<WRAP>`       - if negative do not wrap cells around when considering neighbours, otherwise 0 or 1 as bounds  
-`<START>` - optional starting configuration bitmask as decimal number. If not specified, starting configuration will be one cell in the middle of the line with `<OUTPUT_LENGTH>` // 2.
+`<WRAP>`          - if negative wrap cells around when considering neighbours, otherwise 0 or 1 as bounds  
+`<START>` - optional starting configuration bitmask as decimal number. If not specified, starting configuration will be one cell in the middle of the line with `<OUTPUT_LENGTH>` // 2 length.
 
 ---
 
