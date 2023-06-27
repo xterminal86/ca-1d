@@ -90,12 +90,12 @@ def main():
     print("");
     print("<OUTPUT_LENGTH> - how long the output should be in characters");
     print("<DELAY_MS>      - delay between next iteration of automaton");
-    print("<WRAP>       - if negative do not wrap cells around when considering neighbours,");
-    print("               otherwise 0 or 1 as bounds");
+    print("<WRAP>          - if negative wrap cells around when considering neighbours,");
+    print("                  otherwise 0 or 1 as bounds");
     print("");
     print("<START> - optional starting configuration bitmask as decimal number.");
     print("          If not specified, starting configuration will be one cell");
-    print("          in the middle of the line with OUTPUT_LENGTH / 2.");
+    print("          in the middle of the line with OUTPUT_LENGTH // 2 length");
     print("");
     exit(0);
 
@@ -165,9 +165,9 @@ def main():
   while True:
     for i in range(0, outLen):
       if (i - 1) < 0:
-        L = gen1[-1];
-      else:
         L = gen1[i - 1] if noWrap == False else wrapSymbol;
+      else:
+        L = gen1[i - 1];
 
       C = gen1[i];
 
